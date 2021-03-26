@@ -1,15 +1,20 @@
-package com.example.demo.model;
+package com.example.demo.dtos;
 
+
+import com.example.demo.model.PokemonType;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
-@Builder
 @RequiredArgsConstructor
 @Data
-public class Pokemon {
+@Builder
+public class PokemonDto {
 
+    @NonNull
     private final PokemonType type;
+    @NonNull
     private final String name;
 
 }
